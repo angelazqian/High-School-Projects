@@ -28,27 +28,27 @@ notFold = True
 
 def print_cards(cards):
   for x in range (len(cards)):
-    print (x+1, "┌───────┐", end = "\t")             #"\t" just prints out the equivalent to "tab"
+    print (x+1, "┌─────────┐", end = "\t")             #"\t" just prints out the equivalent to "tab"
   print ()
   for x in range (len(cards)):
-    print ("  │░░░░░░░│", end = "\t")
+    print ("  │░░░░░░░░░│", end = "\t")
   print ()
   for x in range (len(cards)):
     print ("  │░", cardchars[(cards[x])%13 + 11], "░░░░│", end = "\t")     #is printing out the value of the card
   print ()
   for y in range (3):
     for x in range (len(cards)):
-      print ("  │░░░░░░░│", end = "\t")
+      print ("  │░░░░░░░░░│", end = "\t")
     print ()
   for x in range (len(cards)):
-    print ("  │░░░", cardchars[((cards[x])%4) + 7], "░░│", end = "\t")  #is printing out the suit of the card
+    print ("  │░░░", cardchars[((cards[x])%4) + 7], "░░░│", end = "\t")  #is printing out the suit of the card
   print ()
   for y in range (5):
     for x in range (len(cards)):
-      print ("  │░░░░░░░│", end = "\t")
+      print ("  │░░░░░░░░░│", end = "\t")
     print ()
   for x in range (len(cards)):
-    print ("  └───────┘", end = "\t")
+    print ("  └─────────┘", end = "\t")
   print ()
 
 def deal_cards(cards):

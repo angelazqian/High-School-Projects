@@ -1,7 +1,7 @@
 import random
 import math
 cardchars=["┌","─", "┐","│","░","└","┘","♠", "♥", "♣", "♦", "A " ,"2 ","3 ","4 ","5 ","6 ","7 ","8 ","9 ","10","J ", "Q ", "K "]
-finals = ["Royal Flush", "Straight Flush", "Four of a Kind", "Full House", "Flush", "Straight", "Three of a Kind", "Two Pairs", "Pair", "Singles"]
+finals = ["Full House", "Straight Flush", "Four of a Kind", "Full House", "Flush", "Straight", "Three of a Kind", "Two Pairs", "Pair", "Singles"]
 value = [11,2,3,4,5,6,7,8,9,10,10,10,10]
 deck = list(range (52))
 straight = False
@@ -28,27 +28,27 @@ notFold = True
 
 def print_cards(cards):
   for x in range (len(cards)):
-    print (x+1, "┌───────┐", end = "\t")             #"\t" just prints out the equivalent to "tab"
+    print (x+1, "┌─────────┐", end = "\t")             #"\t" just prints out the equivalent to "tab"
   print ()
   for x in range (len(cards)):
-    print ("  │░░░░░░░│", end = "\t")
+    print ("  │░░░░░░░░░│", end = "\t")
   print ()
   for x in range (len(cards)):
     print ("  │░", cardchars[(cards[x])%13 + 11], "░░░░│", end = "\t")     #is printing out the value of the card
   print ()
   for y in range (3):
     for x in range (len(cards)):
-      print ("  │░░░░░░░│", end = "\t")
+      print ("  │░░░░░░░░░│", end = "\t")
     print ()
   for x in range (len(cards)):
-    print ("  │░░░", cardchars[((cards[x])%4) + 7], "░░│", end = "\t")  #is printing out the suit of the card
+    print ("  │░░░", cardchars[((cards[x])%4) + 7], "░░░│", end = "\t")  #is printing out the suit of the card
   print ()
   for y in range (5):
     for x in range (len(cards)):
-      print ("  │░░░░░░░│", end = "\t")
+      print ("  │░░░░░░░░░│", end = "\t")
     print ()
   for x in range (len(cards)):
-    print ("  └───────┘", end = "\t")
+    print ("  └─────────┘", end = "\t")
   print ()
 
 def deal_cards(cards):
@@ -149,7 +149,7 @@ while play:
         print("Your hand: ")
         print_cards(playerhand)
     print(finals[playerfinal])
-    compbet = 1
+    compbet = math.ceil(random.random() * random.random() * random.random() * compchips )
     print("Your chips: ", playerchips)
     print("Computer's chips: ", compchips)
     if gamecount%2 == 1:
@@ -163,15 +163,22 @@ while play:
         elif playerbet > playerchips:
             playerbet = playerchips
         if notFold:
-            if compfinal == 0:
-                print ("Your opponent bets 1 token.")
-            else:
+            if playerfinal <= compfinal:
                 print ("Your opponent folds! You gain 1 token and move to the next hand.")
                 playerchips += 1 
                 compchips -= 1 
                 notFold = False
+            else:
+                if playerbet > compchips:
+                    print ("Your opponent folds! You gain 1 token and move to the next hand.")
+                    playerchips += 1 
+                    compchips -= 1 
+                    notFold = False
+                elif compbet < playerbet:
+                    compbet = math.ceil(random.random() * random.random() * random.random() * (compchips - playerbet)) + playerbet
+                print ("Your opponent bets", compbet, "chips")
     else:
-        if (compfinal == 0):
+        if (playerfinal > compfinal):
             print ("The opponent starts and bets ", compbet, " tokens. If you would like to fold and lose 1 token to move on to the next hand, please type '0'. If you would like to make a bet, please type in the number of tokens you are wagering. You may not bet more tokens than you have.")
             playerbet = int(input("How much do you bet? "))
             if playerbet == 0:
@@ -185,7 +192,7 @@ while play:
             print ("Your opponent goes first and folds! You gain 1 token and move to the next hand.")
             playerchips += 1 
             compchips -= 1 
-            notFold = False
+            notFold = False 
     if notFold:
         print ("Computer's hand: ")
         print_cards(comphand)
@@ -214,7 +221,7 @@ while play:
     if (compchips == 0):
         print ("You win the game!")
     elif (playerchips == 0):
-        print ("you somehow lost against a bot that randomly generates everything lmao")
+        print ("you lost lmao")
     if (compchips * playerchips == 0):
         play = False
  

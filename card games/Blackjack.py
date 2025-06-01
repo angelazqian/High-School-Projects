@@ -16,31 +16,31 @@ choice = ""
 play = True
 def print_cards(cards):
     for x in range (len(cards)):
-        print ("┌───────┐", end = "\t")                         #"\t" just prints out the equivalent to "tab"
+        print ("┌─────────┐", end = "\t")                         #"\t" just prints out the equivalent to "tab"
     print ()
     for x in range (len(cards)):
-        print ("│░░░░░░░│", end = "\t")
+        print ("│░░░░░░░░░│", end = "\t")
     print ()
     for x in range (len(cards)):
         if cards[x] == -1:
-            print ("│░░░░░░░│", end = "\t")
+            print ("│░░░░░░░░░│", end = "\t")
         else: print ("│░", cardchars[(cards[x])%13 + 11], "░░░░│", end = "\t")          #is printing out the value of the card
     print ()
     for y in range (3):
         for x in range (len(cards)):
-            print ("│░░░░░░░│", end = "\t")
+            print ("│░░░░░░░░░│", end = "\t")
         print ()
     for x in range (len(cards)):
         if cards[x] == -1:
-            print ("│░░░░░░░│", end = "\t")
-        else: print ("│░░░", cardchars[((cards[x] + 1)//13) + 7], "░░│", end = "\t")    #is printing out the suit of the card
+            print ("│░░░░░░░░░│", end = "\t")
+        else: print ("│░░░", cardchars[((cards[x] + 1)//13) + 7], "░░░│", end = "\t")    #is printing out the suit of the card
     print ()
     for y in range (5):
         for x in range (len(cards)):
-            print ("│░░░░░░░│", end = "\t")
+            print ("│░░░░░░░░░│", end = "\t")
         print ()
     for x in range (len(cards)):
-        print ("└───────┘", end = "\t")
+        print ("└─────────┘", end = "\t")
     print ()
 while play:
 
