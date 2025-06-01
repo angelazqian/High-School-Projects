@@ -1,0 +1,9 @@
+# AHK Stuff
+My old laptop was a Windows computer, and it was really hard to automate tasks, so I turned to AutoHotkey (AHK). This *probably* violates some Discord TOS, but rules are made to be broken... or something like that. 
+
+Anyways I kept a private server that I used as a personal notepad,file dump, and general free space. It got clogged *fast*, so I wrote a script to bulk-delete my own messages. Simple and effective.
+
+Around the same time I had discovered the existance of Counting bots on Discord, and *of course* I wanted to game the system, so I made an auto-counter which I was actually rather proud of. At first, I thought it would be simple: just have multiple profiles take turns sending numbers, switching tabs automatically, and climbing the leaderboard. I quickly ran into issues though; Discord would lag, or the bot wouldn't register a message right away. If the bot came back online and the last number didn’t line up with what it expected, the whole count would reset. 
+To fix this, I learned how to do basic color detection so the script would only send the next number once the bot confirmed the previous one. I thought it was a clever solution… until my server and account got blacklisted. Apparently, counting at ~2 numbers per second, nonstop for three days across two accounts, raised some flags. Oops.
+
+I also had a few friends doing manual counting in another server, so, being a bit of a jerk, I made another script just to occasionally sabotage their progress. It ended up turning into a fun little back-and-forth challenge of how far could we count before the bot inevitably messed us up. In hindsight, bit of a jerk move, but we had fun, so I'm calling it a win.

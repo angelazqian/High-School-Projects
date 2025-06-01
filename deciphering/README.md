@@ -1,0 +1,4 @@
+# My Deciphering Stuff
+When I was in middle school, I was a HUGE fan of the youtube channel [Game Theory](https://www.youtube.com/@GameTheory), and was *fascinated* by a lot of the ARG puzzles they talked about in their videos. The result was this folder of stuff... I wanted to be able to solve puzzles when I had no access to internet decoders, so I made my own tools (poorly). 
+
+Finding these files on my old laptop recently hit me with a huge wave of nostalgia, I was so small and dumb and naive when I made these but I remember feeling *so* clever for knowing these ciphers (i was not). Still, looking back, this was really fun to do and probably what got me interested programming in the first place. So even if it’s a bit cringe, I’m actually kind of proud of it.

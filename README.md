@@ -1,2 +1,4 @@
-# High-School-Projects
-projects i did in middle/high school i recovered from my old laptop
+# Middle/High School Projects
+After almost two years of college, I realized it was probably a good idea to backup some of my projects that were on my old laptop. I was a bit surprised it still worked at all, considering it was literally held together with duct tape (the monitor fell apart), and it had been collecting dust in the back of my closet the entire time. I'm not counting on it staying functional forever though, so it seemed smart to archive my stuff here just in case.
+
+Anyways, here's some of the old coding projects I did for fun in middle and high school (not including classwork). Most of the code is *terrible*, but it's fun and a bit nostalgic to look back at what I made when I was starting out.
